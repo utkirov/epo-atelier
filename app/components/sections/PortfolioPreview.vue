@@ -39,7 +39,7 @@ const previewItems = [
         <NuxtLink
           to="/portfolio"
           class="btn-gold flex-shrink-0"
-          aria-label="Перейти к полному портфолио"
+          :aria-label="t('portfolio.ctaAria')"
         >
           {{ t('portfolio.cta') }}
         </NuxtLink>

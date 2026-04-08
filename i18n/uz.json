@@ -54,6 +54,7 @@
     "label": "Portfolio",
     "title": "Bizning ishlarimiz",
     "cta": "Barcha ishlarni ko'rish",
+    "ctaAria": "To'liq portfolioga o'tish",
     "filters": {
       "all": "Barchasi",
       "tables": "Stollar",

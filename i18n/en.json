@@ -54,6 +54,7 @@
     "label": "Portfolio",
     "title": "Our Work",
     "cta": "View All Work",
+    "ctaAria": "View full portfolio",
     "filters": {
       "all": "All",
       "tables": "Tables",
