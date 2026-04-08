@@ -1,3 +1,86 @@
 {
-  "welcome": "Welcome"
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Art in wood, resin\nand functional solutions",
+    "subtitle": "Handcrafted custom furniture — from concept to finished piece",
+    "cta": "View Our Work"
+  },
+  "about": {
+    "label": "About Us",
+    "title": "Craftsmanship embodied in material",
+    "text": "EPO Atelier is a custom furniture workshop in Tashkent. We create unique pieces from natural wood and epoxy resin — from dining tables to storage systems. Every item is handcrafted to individual dimensions and specifications.",
+    "stats": {
+      "projects": "projects",
+      "experience": "years of experience",
+      "masters": "craftsmen"
+    }
+  },
+  "services": {
+    "label": "Services",
+    "title": "What We Create",
+    "items": [
+      {
+        "title": "Epoxy Resin Tables",
+        "description": "Unique dining and coffee tables with epoxy resin pours. Every piece is one-of-a-kind."
+      },
+      {
+        "title": "Custom Furniture",
+        "description": "Wardrobes, sideboards, and chests made to your dimensions and design. Natural wood, modern finishes."
+      },
+      {
+        "title": "Storage Systems",
+        "description": "Walk-in wardrobes, shelving units, and built-in solutions for optimal space organisation."
+      }
+    ]
+  },
+  "benefits": {
+    "label": "Why Us",
+    "title": "Why Clients Choose Us",
+    "items": [
+      { "title": "Handcrafted", "text": "Every piece is crafted by hand with attention to detail" },
+      { "title": "Tailored Approach", "text": "We design to your exact dimensions and style" },
+      { "title": "Natural Materials", "text": "We use only quality wood and resins" },
+      { "title": "Quality Guarantee", "text": "We guarantee all pieces and hardware" },
+      { "title": "On-Time Delivery", "text": "We honour agreed production timelines" },
+      { "title": "Delivery & Installation", "text": "We deliver and install finished pieces" }
+    ]
+  },
+  "portfolio": {
+    "label": "Portfolio",
+    "title": "Our Work",
+    "cta": "View All Work",
+    "filters": {
+      "all": "All",
+      "tables": "Tables",
+      "shelves": "Shelving",
+      "wardrobes": "Wardrobes",
+      "decor": "Decor"
+    },
+    "close": "Close"
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's Discuss Your Project",
+    "form": {
+      "name": "Your Name",
+      "phone": "Phone Number",
+      "message": "Tell us about your project",
+      "submit": "Send Inquiry",
+      "sending": "Sending...",
+      "success": "Inquiry sent! We will be in touch shortly.",
+      "error": "Error sending. Please try again.",
+      "required": "This field is required"
+    },
+    "address": "Tashkent, Bektemir District, Ittifok Street, 52",
+    "phone": "+998 77 081 80 30",
+    "email": "info@epo-atelier.uz"
+  },
+  "footer": {
+    "copyright": "© 2024 EPO Atelier. All rights reserved."
+  }
 }

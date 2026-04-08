@@ -1,3 +1,86 @@
 {
-  "welcome": "Xush kelibsiz"
+  "nav": {
+    "about": "Biz haqimizda",
+    "services": "Xizmatlar",
+    "portfolio": "Portfolio",
+    "contact": "Aloqa"
+  },
+  "hero": {
+    "title": "Yog'och, smola va\nfunksional yechimlardagi san'at",
+    "subtitle": "Qo'lda yasalgan mebel — g'oyadan tayyor mahsulotgacha",
+    "cta": "Ishlarni ko'rish"
+  },
+  "about": {
+    "label": "Biz haqimizda",
+    "title": "Materialda mujassamlashgan mahorat",
+    "text": "EPO Atelier — Toshkentdagi maxsus mebel ustaxonasi. Biz tabiiy yog'och va epoksi smoladan noyob buyumlar yaratamiz: ovqat stollaridan tortib saqlash tizimlarigacha. Har bir buyum individual o'lchamlar va xohishlar bo'yicha qo'lda tayyorlanadi.",
+    "stats": {
+      "projects": "loyiha",
+      "experience": "yil tajriba",
+      "masters": "usta"
+    }
+  },
+  "services": {
+    "label": "Xizmatlar",
+    "title": "Biz nima yaratamiz",
+    "items": [
+      {
+        "title": "Epoksi smolali stollar",
+        "description": "Epoksi smola quyish bilan noyob ovqat va jurnal stollari. Har bir buyum takrorlanmas."
+      },
+      {
+        "title": "Maxsus mebel",
+        "description": "O'lchamlaringiz va dizayningiz bo'yicha shkaflar, javonlar, komodlar. Tabiiy yog'och, zamonaviy fasadlar."
+      },
+      {
+        "title": "Saqlash tizimlari",
+        "description": "Gardеroblar, javonlar va maqbul makonga mos o'rnatilgan yechimlar."
+      }
+    ]
+  },
+  "benefits": {
+    "label": "Afzalliklar",
+    "title": "Nega bizni tanlashadi",
+    "items": [
+      { "title": "Qo'l ishi", "text": "Har bir buyum tafsilotlarga e'tibor berib qo'lda yaratiladi" },
+      { "title": "Individual yondashuv", "text": "O'lchamlaringiz va uslubingizga mos loyiha ishlab chiqamiz" },
+      { "title": "Tabiiy materiallar", "text": "Faqat sifatli yog'och va smolalardan foydalanamiz" },
+      { "title": "Sifat kafolati", "text": "Barcha buyumlar va furnituraga kafolat beramiz" },
+      { "title": "Aniq muddatlar", "text": "Kelishilgan tayyorlash muddatlariga rioya qilamiz" },
+      { "title": "Yetkazib berish va o'rnatish", "text": "Tayyor buyumlarni yetkazib beramiz va o'rnatamiz" }
+    ]
+  },
+  "portfolio": {
+    "label": "Portfolio",
+    "title": "Bizning ishlarimiz",
+    "cta": "Barcha ishlarni ko'rish",
+    "filters": {
+      "all": "Barchasi",
+      "tables": "Stollar",
+      "shelves": "Javonlar",
+      "wardrobes": "Shkaflar",
+      "decor": "Dekor"
+    },
+    "close": "Yopish"
+  },
+  "contact": {
+    "label": "Aloqa",
+    "title": "Loyihangizni muhokama qilaylik",
+    "form": {
+      "name": "Ismingiz",
+      "phone": "Telefon",
+      "message": "Loyiha haqida aytib bering",
+      "submit": "Ariza yuborish",
+      "sending": "Yuborilmoqda...",
+      "success": "Ariza yuborildi! Tez orada siz bilan bog'lanamiz.",
+      "error": "Yuborishda xatolik. Qayta urinib ko'ring.",
+      "required": "Bu maydon majburiy"
+    },
+    "address": "Toshkent, Bektemir tumani, Ittifok ko'chasi, 52",
+    "phone": "+998 77 081 80 30",
+    "email": "info@epo-atelier.uz"
+  },
+  "footer": {
+    "copyright": "© 2024 EPO Atelier. Barcha huquqlar himoyalangan."
+  }
 }
