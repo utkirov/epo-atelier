@@ -41,7 +41,7 @@ const benefitIcons = [
         <p class="label-tag text-gold mb-4">{{ t('benefits.label') }}</p>
         <h2
           id="benefits-heading"
-          class="font-display text-3xl lg:text-4xl xl:text-5xl font-bold text-text leading-[1.15]"
+          class="font-display text-[clamp(1.75rem,5vw,4rem)] lg:text-4xl xl:text-5xl font-bold text-text leading-[1.15]"
         >
           {{ t('benefits.title') }}
         </h2>

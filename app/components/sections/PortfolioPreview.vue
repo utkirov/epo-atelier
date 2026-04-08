@@ -24,21 +24,21 @@ const previewItems = [
       <!-- Header -->
       <div
         ref="elementRef"
-        class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 lg:mb-14 transition-all duration-700 ease-out"
+        class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 lg:mb-14 transition-all duration-700 ease-out"
         :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
       >
         <div>
           <p class="label-tag text-gold mb-3">{{ t('portfolio.label') }}</p>
           <h2
             id="portfolio-preview-heading"
-            class="font-display text-3xl lg:text-4xl xl:text-5xl font-bold text-text leading-[1.15]"
+            class="font-display text-[clamp(1.75rem,5vw,4rem)] lg:text-4xl xl:text-5xl font-bold text-text leading-[1.15]"
           >
             {{ t('portfolio.title') }}
           </h2>
         </div>
         <NuxtLink
           to="/portfolio"
-          class="btn-gold flex-shrink-0"
+          class="btn-gold flex-shrink-0 self-start md:self-auto"
           :aria-label="t('portfolio.ctaAria')"
         >
           {{ t('portfolio.cta') }}

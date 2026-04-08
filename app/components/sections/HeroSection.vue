@@ -30,7 +30,7 @@ const { t } = useI18n()
     <div class="relative z-20 max-w-5xl mx-auto px-6 lg:px-8 text-center">
       <p class="label-tag text-gold hero-label mb-6">EPO ATELIER · TASHKENT</p>
 
-      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-text leading-[1.1] mb-6 hero-title whitespace-pre-line">
+      <h1 class="font-display text-[clamp(1.75rem,7vw,5rem)] md:text-4xl lg:text-5xl font-bold text-text leading-[1.1] mb-6 hero-title">
         {{ t('hero.title') }}
       </h1>
 

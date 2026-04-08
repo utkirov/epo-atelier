@@ -26,14 +26,14 @@ const services = computed(() => tm('services.items') as Array<{ title: string; d
         <p class="label-tag text-gold mb-4">{{ t('services.label') }}</p>
         <h2
           id="services-heading"
-          class="font-display text-3xl lg:text-4xl xl:text-5xl font-bold text-text leading-[1.15]"
+          class="font-display text-[clamp(1.75rem,5vw,4rem)] lg:text-4xl xl:text-5xl font-bold text-text leading-[1.15]"
         >
           {{ t('services.title') }}
         </h2>
       </div>
 
       <!-- Cards grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
         <ServiceCard
           v-for="(service, i) in services"
           :key="i"

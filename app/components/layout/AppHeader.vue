@@ -168,11 +168,22 @@ const langItems = [
         aria-modal="true"
         aria-label="Мобильное меню"
       >
+        <!-- Close button -->
+        <button
+          class="absolute top-5 right-5 min-w-[44px] min-h-[44px] flex items-center justify-center text-muted hover:text-gold transition-colors duration-200"
+          :aria-label="t('nav.close') || 'Закрыть меню'"
+          @click="mobileOpen = false"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+
         <template v-for="(link, i) in navLinks" :key="link.key">
           <NuxtLink
             v-if="link.anchor.startsWith('/')"
             :to="link.anchor"
-            class="font-display text-3xl font-bold text-text hover:text-gold transition-colors duration-200"
+            class="font-display text-2xl sm:text-3xl font-bold text-text hover:text-gold transition-colors duration-200"
             :style="{ transitionDelay: `${i * 60}ms` }"
             @click="mobileOpen = false"
           >
@@ -181,7 +192,7 @@ const langItems = [
           <a
             v-else
             :href="link.anchor"
-            class="font-display text-3xl font-bold text-text hover:text-gold transition-colors duration-200"
+            class="font-display text-2xl sm:text-3xl font-bold text-text hover:text-gold transition-colors duration-200"
             :style="{ transitionDelay: `${i * 60}ms` }"
             @click="mobileOpen = false"
           >

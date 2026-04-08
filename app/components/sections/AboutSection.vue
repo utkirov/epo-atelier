@@ -23,7 +23,7 @@ const { isVisible, elementRef } = useScrollAnimation()
         <p class="label-tag text-gold mb-4">{{ t('about.label') }}</p>
         <h2
           id="about-heading"
-          class="font-display text-3xl lg:text-4xl xl:text-5xl font-bold text-text mb-6 leading-[1.15]"
+          class="font-display text-[clamp(1.75rem,5vw,4rem)] lg:text-4xl xl:text-5xl font-bold text-text mb-6 leading-[1.15]"
         >
           {{ t('about.title') }}
         </h2>
@@ -32,7 +32,7 @@ const { isVisible, elementRef } = useScrollAnimation()
         </p>
 
         <!-- Stats -->
-        <div class="flex flex-wrap gap-10">
+        <div class="grid grid-cols-3 gap-4 lg:flex lg:flex-wrap lg:gap-10">
           <CounterStat :value="120" suffix="+" :label="t('about.stats.projects')" />
           <CounterStat :value="5" :label="t('about.stats.experience')" />
           <CounterStat :value="3" :label="t('about.stats.masters')" />
@@ -40,7 +40,7 @@ const { isVisible, elementRef } = useScrollAnimation()
       </div>
 
       <!-- Photo side -->
-      <div class="relative aspect-[4/5] overflow-hidden">
+      <div class="relative aspect-[3/2] lg:aspect-[4/5] overflow-hidden">
         <img
           src="/images/about-photo.jpg"
           :alt="t('about.title')"
