@@ -1,8 +1,8 @@
 <!-- app/components/layout/AppHeader.vue -->
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
-import { useI18n } from '#i18n'
-import { useSwitchLocalePath } from '#i18n'
+import { useI18n, useSwitchLocalePath } from '#i18n'
+import { navigateTo } from '#app'
 
 const { t, locale } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
