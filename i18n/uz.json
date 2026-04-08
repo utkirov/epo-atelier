@@ -62,7 +62,8 @@
       "wardrobes": "Shkaflar",
       "decor": "Dekor"
     },
-    "close": "Yopish"
+    "close": "Yopish",
+    "open": "Loyihani ochish: {title}"
   },
   "contact": {
     "label": "Aloqa",

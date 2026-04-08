@@ -62,7 +62,8 @@
       "wardrobes": "Wardrobes",
       "decor": "Decor"
     },
-    "close": "Close"
+    "close": "Close",
+    "open": "Open project: {title}"
   },
   "contact": {
     "label": "Contact",

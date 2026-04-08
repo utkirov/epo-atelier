@@ -64,7 +64,7 @@ function closeLightbox() {
           class="relative"
         >
           <button
-            class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center text-text bg-black/40 hover:bg-black/70 transition-colors duration-200"
+            class="absolute top-4 right-4 z-10 w-11 h-11 flex items-center justify-center text-text bg-black/40 hover:bg-black/70 transition-colors duration-200"
             :aria-label="t('portfolio.close')"
             @click="closeLightbox"
           >

@@ -1,5 +1,9 @@
 <!-- app/components/ui/PortfolioItem.vue -->
 <script setup lang="ts">
+import { useI18n } from '#i18n'
+
+const { t } = useI18n()
+
 defineProps<{
   src: string
   title: string
@@ -15,7 +19,7 @@ const emit = defineEmits<{
   <article
     class="portfolio-item group relative overflow-hidden cursor-pointer focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
     tabindex="0"
-    :aria-label="`Открыть проект: ${title}`"
+    :aria-label="t('portfolio.open', { title })"
     role="button"
     @click="emit('open', { src, title })"
     @keydown.enter="emit('open', { src, title })"
