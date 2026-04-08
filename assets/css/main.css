@@ -1,5 +1,6 @@
 /* assets/css/main.css */
 @import "tailwindcss";
+@config "./tailwind.config.ts";
 
 /* Tailwind v4 theme configuration */
 @theme {
@@ -41,16 +42,6 @@
   --breakpoint-xl: 1440px;
 }
 
-:root {
-  --color-bg: #0A0A0A;
-  --color-surface: #111111;
-  --color-border: #1E1E1E;
-  --color-gold: #C9A96E;
-  --color-gold-dim: #8A6A3A;
-  --color-text: #F5F0E8;
-  --color-muted: #6B6560;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -62,7 +53,7 @@ html {
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -107,7 +98,7 @@ body {
 
 /* Label style utility */
 .label-tag {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.6875rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -116,20 +107,20 @@ body {
 
 /* Section padding utility */
 .section-padding {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) {
   .section-padding {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
   .section-padding {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 }
