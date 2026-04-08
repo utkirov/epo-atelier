@@ -77,6 +77,7 @@ function closeLightbox() {
             :src="lightboxItem.src"
             :alt="lightboxItem.title"
             class="w-full max-h-[80vh] object-contain"
+            @error="(e) => { const el = e.target as HTMLImageElement; el.style.background = 'linear-gradient(135deg, #111111 0%, #1a1208 100%)'; el.style.minHeight = '300px' }"
           />
 
           <div class="p-6 bg-surface border-t border-border">

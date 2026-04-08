@@ -3,7 +3,8 @@
     "about": "Biz haqimizda",
     "services": "Xizmatlar",
     "portfolio": "Portfolio",
-    "contact": "Aloqa"
+    "contact": "Aloqa",
+    "langLabel": "Tilni tanlash"
   },
   "hero": {
     "title": "Yog'och, smola va\nfunksional yechimlardagi san'at",
@@ -83,6 +84,6 @@
     "email": "info{'@'}epo-atelier.uz"
   },
   "footer": {
-    "copyright": "© 2024 EPO Atelier. Barcha huquqlar himoyalangan."
+    "copyright": "© 2026 EPO Atelier. Barcha huquqlar himoyalangan."
   }
 }

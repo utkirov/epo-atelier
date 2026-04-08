@@ -32,7 +32,14 @@ const emit = defineEmits<{
       width="600"
       height="800"
       loading="lazy"
+      @error="(e) => { const el = e.target as HTMLImageElement; el.style.display = 'none' }"
     />
+    <!-- Shown when image fails to load -->
+    <div class="img-placeholder absolute inset-0 flex items-center justify-center">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-gold-dim opacity-40" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="2"/><path d="m3 9 5-5 4 4 3-3 6 6"/>
+      </svg>
+    </div>
 
     <!-- Hover overlay -->
     <div
@@ -51,3 +58,11 @@ const emit = defineEmits<{
     </div>
   </article>
 </template>
+
+<style scoped>
+.img-placeholder {
+  background: linear-gradient(135deg, #111111 0%, #1a1208 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+</style>

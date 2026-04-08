@@ -23,7 +23,7 @@ const services = computed(() => tm('services.items') as Array<{ title: string; d
         class="mb-12 lg:mb-16 transition-all duration-700 ease-out"
         :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
       >
-        <p class="label-tag mb-4">{{ t('services.label') }}</p>
+        <p class="label-tag text-gold mb-4">{{ t('services.label') }}</p>
         <h2
           id="services-heading"
           class="font-display text-3xl lg:text-4xl xl:text-5xl font-bold text-text leading-[1.15]"

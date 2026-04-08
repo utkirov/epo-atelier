@@ -3,7 +3,8 @@
     "about": "О нас",
     "services": "Услуги",
     "portfolio": "Портфолио",
-    "contact": "Контакты"
+    "contact": "Контакты",
+    "langLabel": "Выбрать язык"
   },
   "hero": {
     "title": "Искусство в дереве,\nсмоле и функциональных решениях",
@@ -83,6 +84,6 @@
     "email": "info{'@'}epo-atelier.uz"
   },
   "footer": {
-    "copyright": "© 2024 EPO Atelier. Все права защищены."
+    "copyright": "© 2026 EPO Atelier. Все права защищены."
   }
 }

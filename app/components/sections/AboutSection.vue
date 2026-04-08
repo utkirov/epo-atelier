@@ -20,7 +20,7 @@ const { isVisible, elementRef } = useScrollAnimation()
     >
       <!-- Text side -->
       <div>
-        <p class="label-tag mb-4">{{ t('about.label') }}</p>
+        <p class="label-tag text-gold mb-4">{{ t('about.label') }}</p>
         <h2
           id="about-heading"
           class="font-display text-3xl lg:text-4xl xl:text-5xl font-bold text-text mb-6 leading-[1.15]"

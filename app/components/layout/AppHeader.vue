@@ -1,6 +1,6 @@
 <!-- app/components/layout/AppHeader.vue -->
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import { useI18n, useSwitchLocalePath } from '#i18n'
 import { navigateTo } from '#app'
 
@@ -9,13 +9,68 @@ const switchLocalePath = useSwitchLocalePath()
 
 const isScrolled = ref(false)
 const mobileOpen = ref(false)
+const mobileMenuRef = ref<HTMLElement | null>(null)
 
 function onScroll() {
   isScrolled.value = window.scrollY > 60
 }
 
-onMounted(() => window.addEventListener('scroll', onScroll, { passive: true }))
-onUnmounted(() => window.removeEventListener('scroll', onScroll))
+function onKeydown(e: KeyboardEvent) {
+  if (!mobileOpen.value) return
+
+  if (e.key === 'Escape') {
+    mobileOpen.value = false
+    return
+  }
+
+  // Focus trap
+  if (e.key !== 'Tab') return
+  const menu = mobileMenuRef.value
+  if (!menu) return
+
+  const focusable = Array.from(
+    menu.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )
+  )
+  if (!focusable.length) return
+
+  const first = focusable[0]
+  const last = focusable[focusable.length - 1]
+
+  if (e.shiftKey) {
+    if (document.activeElement === first) {
+      e.preventDefault()
+      last.focus()
+    }
+  } else {
+    if (document.activeElement === last) {
+      e.preventDefault()
+      first.focus()
+    }
+  }
+}
+
+watch(mobileOpen, async (open) => {
+  if (open) {
+    document.body.style.overflow = 'hidden'
+    await nextTick()
+    mobileMenuRef.value?.querySelector<HTMLElement>('a, button')?.focus()
+  } else {
+    document.body.style.overflow = ''
+  }
+})
+
+onMounted(() => {
+  window.addEventListener('scroll', onScroll, { passive: true })
+  window.addEventListener('keydown', onKeydown)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll)
+  window.removeEventListener('keydown', onKeydown)
+  document.body.style.overflow = ''
+})
 
 const navLinks = [
   { key: 'nav.about', anchor: '#about' },
@@ -54,14 +109,14 @@ const langItems = [
           <NuxtLink
             v-if="link.anchor.startsWith('/')"
             :to="link.anchor"
-            class="nav-link label-tag hover:text-gold transition-colors duration-200"
+            class="nav-link label-tag text-muted hover:text-gold transition-colors duration-200"
           >
             {{ t(link.key) }}
           </NuxtLink>
           <a
             v-else
             :href="link.anchor"
-            class="nav-link label-tag hover:text-gold transition-colors duration-200"
+            class="nav-link label-tag text-muted hover:text-gold transition-colors duration-200"
           >
             {{ t(link.key) }}
           </a>
@@ -74,7 +129,7 @@ const langItems = [
         <UDropdownMenu :items="langItems">
           <button
             class="label-tag text-muted hover:text-gold transition-colors duration-200 min-w-[44px] min-h-[44px] flex items-center justify-center"
-            :aria-label="`Текущий язык: ${locale.toUpperCase()}`"
+            :aria-label="t('nav.langLabel')"
           >
             {{ locale.toUpperCase() }}
           </button>
@@ -107,6 +162,7 @@ const langItems = [
     <Transition name="mobile-menu">
       <div
         v-if="mobileOpen"
+        ref="mobileMenuRef"
         class="lg:hidden fixed inset-0 bg-bg z-40 flex flex-col items-center justify-center gap-8"
         role="dialog"
         aria-modal="true"

@@ -20,7 +20,7 @@ const { isVisible, elementRef } = useScrollAnimation()
     >
       <!-- Left: info -->
       <div>
-        <p class="label-tag mb-4">{{ t('contact.label') }}</p>
+        <p class="label-tag text-gold mb-4">{{ t('contact.label') }}</p>
         <h2
           id="contact-heading"
           class="font-display text-3xl lg:text-4xl xl:text-5xl font-bold text-text mb-8 leading-[1.15]"
@@ -58,7 +58,7 @@ const { isVisible, elementRef } = useScrollAnimation()
             target="_blank"
             rel="noopener noreferrer"
             class="label-tag text-muted hover:text-gold transition-colors duration-200 min-h-[44px] flex items-center"
-            aria-label="Telegram"
+            aria-label="Telegram EPO Atelier"
           >
             Telegram
           </a>
@@ -68,7 +68,7 @@ const { isVisible, elementRef } = useScrollAnimation()
             target="_blank"
             rel="noopener noreferrer"
             class="label-tag text-muted hover:text-gold transition-colors duration-200 min-h-[44px] flex items-center"
-            aria-label="Instagram"
+            aria-label="Instagram EPO Atelier"
           >
             Instagram
           </a>

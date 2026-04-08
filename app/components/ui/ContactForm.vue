@@ -43,7 +43,7 @@ async function submit() {
   >
     <!-- Name -->
     <div>
-      <label for="contact-name" class="label-tag block mb-2">
+      <label for="contact-name" class="label-tag text-muted block mb-2">
         {{ t('contact.form.name') }} <span class="text-gold" aria-hidden="true">*</span>
       </label>
       <input
@@ -67,7 +67,7 @@ async function submit() {
 
     <!-- Phone -->
     <div>
-      <label for="contact-phone" class="label-tag block mb-2">
+      <label for="contact-phone" class="label-tag text-muted block mb-2">
         {{ t('contact.form.phone') }} <span class="text-gold" aria-hidden="true">*</span>
       </label>
       <input
@@ -91,7 +91,7 @@ async function submit() {
 
     <!-- Message -->
     <div>
-      <label for="contact-message" class="label-tag block mb-2">
+      <label for="contact-message" class="label-tag text-muted block mb-2">
         {{ t('contact.form.message') }} <span class="text-gold" aria-hidden="true">*</span>
       </label>
       <textarea
@@ -116,7 +116,7 @@ async function submit() {
     <button
       type="submit"
       :disabled="status === 'sending'"
-      class="btn-gold w-full disabled:opacity-50 disabled:cursor-not-allowed"
+      class="btn-gold w-full text-center disabled:opacity-50 disabled:cursor-not-allowed"
       :aria-busy="status === 'sending'"
     >
       {{ status === 'sending' ? t('contact.form.sending') : t('contact.form.submit') }}
@@ -136,36 +136,6 @@ async function submit() {
 </template>
 
 <style scoped>
-.btn-gold {
-  position: relative;
-  display: inline-block;
-  padding: 0.875rem 2.5rem;
-  border: 1px solid var(--color-gold);
-  color: var(--color-gold);
-  font-family: var(--font-body);
-  font-size: 0.6875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  overflow: hidden;
-  transition: color 300ms ease;
-  text-align: center;
-}
-
-.btn-gold::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-gold);
-  transform: translateX(-100%);
-  transition: transform 300ms ease;
-  z-index: -1;
-}
-
-.btn-gold:not(:disabled):hover {
-  color: var(--color-bg);
-}
-
-.btn-gold:not(:disabled):hover::before {
-  transform: translateX(0);
-}
+/* btn-gold defined globally in assets/css/main.css */
+/* text-align: center is applied via Tailwind class on the element */
 </style>

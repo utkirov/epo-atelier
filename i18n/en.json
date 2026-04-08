@@ -3,7 +3,8 @@
     "about": "About",
     "services": "Services",
     "portfolio": "Portfolio",
-    "contact": "Contact"
+    "contact": "Contact",
+    "langLabel": "Select language"
   },
   "hero": {
     "title": "Art in wood, resin\nand functional solutions",
@@ -83,6 +84,6 @@
     "email": "info{'@'}epo-atelier.uz"
   },
   "footer": {
-    "copyright": "© 2024 EPO Atelier. All rights reserved."
+    "copyright": "© 2026 EPO Atelier. All rights reserved."
   }
 }

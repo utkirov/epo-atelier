@@ -38,7 +38,7 @@ useHead({
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <!-- Page title -->
         <div class="mb-10 lg:mb-14">
-          <p class="label-tag mb-4">{{ t('portfolio.label') }}</p>
+          <p class="label-tag text-gold mb-4">{{ t('portfolio.label') }}</p>
           <h1 class="font-display text-4xl lg:text-5xl xl:text-6xl font-bold text-text leading-[1.1]">
             {{ t('portfolio.title') }}
           </h1>

@@ -17,6 +17,10 @@ export function useCounter(target: number, duration = 2000) {
       count.value = target
       return
     }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      count.value = target
+      return
+    }
     started.value = true
 
     const startTime = performance.now()

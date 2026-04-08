@@ -28,7 +28,7 @@ const previewItems = [
         :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
       >
         <div>
-          <p class="label-tag mb-3">{{ t('portfolio.label') }}</p>
+          <p class="label-tag text-gold mb-3">{{ t('portfolio.label') }}</p>
           <h2
             id="portfolio-preview-heading"
             class="font-display text-3xl lg:text-4xl xl:text-5xl font-bold text-text leading-[1.15]"
@@ -64,7 +64,14 @@ const previewItems = [
             width="600"
             height="400"
             loading="lazy"
+            @error="(e) => { const el = e.target as HTMLImageElement; el.style.display = 'none' }"
           />
+          <!-- Placeholder when image fails -->
+          <div class="preview-placeholder absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-gold-dim opacity-30">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><path d="m3 9 5-5 4 4 3-3 6 6"/>
+            </svg>
+          </div>
           <!-- Overlay -->
           <div
             class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-end p-6"
@@ -82,29 +89,10 @@ const previewItems = [
 </template>
 
 <style scoped>
-.btn-gold {
-  position: relative;
-  display: inline-block;
-  padding: 0.875rem 2rem;
-  border: 1px solid var(--color-gold);
-  color: var(--color-gold);
-  font-family: var(--font-body);
-  font-size: 0.6875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  overflow: hidden;
-  transition: color 300ms ease;
-  white-space: nowrap;
+.preview-placeholder {
+  background: linear-gradient(135deg, #111111 0%, #1a1208 100%);
+  z-index: 0;
 }
-.btn-gold::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-gold);
-  transform: translateX(-100%);
-  transition: transform 300ms ease;
-  z-index: -1;
-}
-.btn-gold:hover { color: var(--color-bg); }
-.btn-gold:hover::before { transform: translateX(0); }
+
+/* btn-gold defined globally in assets/css/main.css */
 </style>
