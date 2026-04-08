@@ -27,7 +27,7 @@ export default defineNuxtConfig({
       { code: 'uz', name: 'UZ', file: 'uz.json' },
       { code: 'en', name: 'EN', file: 'en.json' },
     ],
-    langDir: 'i18n/',
+    langDir: '../i18n/',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'epo_lang',
