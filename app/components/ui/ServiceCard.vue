@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <article class="service-card group relative border border-border bg-surface p-8 lg:p-10 transition-all duration-300 hover:border-gold cursor-default">
+  <article class="service-card group relative border border-border bg-surface p-8 lg:p-10 hover:border-gold cursor-default [transition:border-color_300ms_ease]">
     <!-- Index number -->
     <span class="label-tag text-border group-hover:text-gold-dim transition-colors duration-300 mb-6 block">
       0{{ index + 1 }}
