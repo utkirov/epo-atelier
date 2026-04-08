@@ -21,12 +21,16 @@ function validate() {
 async function submit() {
   if (!validate()) return
   status.value = 'sending'
-  // Simulated form submission (replace with real API endpoint)
-  await new Promise(resolve => setTimeout(resolve, 1200))
-  status.value = 'success'
-  form.name = ''
-  form.phone = ''
-  form.message = ''
+  try {
+    // Simulated form submission (replace with real API endpoint)
+    await new Promise(resolve => setTimeout(resolve, 1200))
+    status.value = 'success'
+    form.name = ''
+    form.phone = ''
+    form.message = ''
+  } catch {
+    status.value = 'error'
+  }
 }
 </script>
 
@@ -96,7 +100,7 @@ async function submit() {
         rows="4"
         :aria-describedby="errors.message ? 'message-error' : undefined"
         :aria-invalid="!!errors.message"
-        class="w-full bg-transparent border border-border px-4 py-3 text-text text-sm focus:border-gold focus:outline-none transition-colors duration-200 resize-none"
+        class="w-full bg-transparent border border-border px-4 py-3 text-text text-sm focus:border-gold focus:outline-none transition-colors duration-200 resize-none min-h-[44px]"
       />
       <p
         v-if="errors.message"
