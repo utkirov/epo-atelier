@@ -163,7 +163,7 @@ const langItems = [
       <div
         v-if="mobileOpen"
         ref="mobileMenuRef"
-        class="lg:hidden fixed inset-0 bg-bg z-40 flex flex-col items-center justify-center gap-8"
+        class="lg:hidden fixed inset-0 bg-bg z-50 flex flex-col items-center justify-center gap-8"
         role="dialog"
         aria-modal="true"
         aria-label="Мобильное меню"
