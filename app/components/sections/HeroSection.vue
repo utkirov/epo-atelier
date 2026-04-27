@@ -63,13 +63,18 @@ const { t } = useI18n()
 
 /* Ken Burns zoom */
 .hero-zoom {
-  animation: kenBurns 12s ease-out forwards;
   transform-origin: center center;
 }
 
-@keyframes kenBurns {
-  from { transform: scale(1.08); }
-  to   { transform: scale(1.0); }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-zoom {
+    animation: kenBurns 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes kenBurns {
+    from { transform: scale(1.0); }
+    to   { transform: scale(1.1); }
+  }
 }
 
 /* Dark overlay fade in */
