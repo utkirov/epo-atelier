@@ -50,6 +50,7 @@ useHead(() => ({
     ...(localeHead.value.meta ?? []),
     { name: 'description', content: t('about.text').slice(0, 155) },
     { property: 'og:title', content: `${t('portfolio.title')} — EPO Atelier` },
+    { property: 'og:description', content: t('portfolio.title') + ' — ' + t('about.label') + ' EPO Atelier' },
     { property: 'og:url', content: 'https://epo-atelier.uz/portfolio' },
   ],
   link: localeHead.value.link ?? [],

@@ -66,6 +66,7 @@ export default defineNuxtConfig({
         { property: 'og:site_name', content: 'EPO Atelier' },
         { property: 'og:image', content: 'https://epo-atelier.uz/images/hero-bg.jpg' },
         { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:image', content: 'https://epo-atelier.uz/images/hero-bg.jpg' },
       ],
     },
     pageTransition: { name: 'page', mode: 'out-in' },

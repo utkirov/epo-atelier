@@ -71,7 +71,7 @@
       { "id": 3, "title": "Ocean Table", "description": "To'lqinlarni taqlid qiluvchi okean uslubidagi epoksid stol. 200×100 sm.", "category": "tables" },
       { "id": 4, "title": "Modular Shelving Unit", "description": "Eman yog'ochidan modulli javon. 180×200 sm.", "category": "shelves" },
       { "id": 5, "title": "Floating Shelf Set", "description": "Kul massividan osilma javonlar to'plami. 5 ta.", "category": "shelves" },
-      { "id": 6, "title": "Walk-in Wardrobe", "description": "Individual o'lchamlar bo'yicha ochiq javonli gardеrobxona.", "category": "wardrobes" },
+      { "id": 6, "title": "Walk-in Wardrobe", "description": "Individual o'lchamlar bo'yicha ochiq javonli garderobxona.", "category": "wardrobes" },
       { "id": 7, "title": "Sliding Door Wardrobe", "description": "Ko'zgu fasadli siljuvchi eshikli shkaf. 300×220 sm.", "category": "wardrobes" },
       { "id": 8, "title": "Epoxy Wall Art", "description": "Epoksid smola va oltin folga dekorativ panel.", "category": "decor" }
     ]
