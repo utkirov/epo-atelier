@@ -37,12 +37,13 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    baseUrl: 'https://epo-atelier.uz',
     strategy: 'prefix_except_default',
     defaultLocale: 'ru',
     locales: [
-      { code: 'ru', name: 'RU', file: 'ru.json' },
-      { code: 'uz', name: 'UZ', file: 'uz.json' },
-      { code: 'en', name: 'EN', file: 'en.json' },
+      { code: 'ru', name: 'RU', language: 'ru', file: 'ru.json' },
+      { code: 'uz', name: 'UZ', language: 'uz', file: 'uz.json' },
+      { code: 'en', name: 'EN', language: 'en', file: 'en.json' },
     ],
     langDir: '../i18n/',
     detectBrowserLanguage: {
