@@ -62,6 +62,9 @@ function closeLightbox() {
         <div
           v-if="lightboxItem"
           class="relative"
+          v-motion
+          :initial="{ opacity: 0, scale: 0.92 }"
+          :enter="{ opacity: 1, scale: 1, transition: { duration: 280, ease: 'easeOut' } }"
         >
           <button
             class="absolute top-4 right-4 z-10 w-11 h-11 flex items-center justify-center text-text bg-black/40 hover:bg-black/70 transition-colors duration-200"
