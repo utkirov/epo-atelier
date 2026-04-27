@@ -3,27 +3,42 @@
 import { ref, computed } from 'vue'
 import { useI18n } from '#i18n'
 
-const { t } = useI18n()
+const { t, tm } = useI18n()
 
 const activeFilter = ref('all')
 
 const filterKeys = ['all', 'tables', 'shelves', 'wardrobes', 'decor'] as const
 
-const allItems = [
-  { id: 1, src: '/images/portfolio/table-1.jpg', title: 'Epoxy River Table', description: 'Обеденный стол из массива ореха с заливкой из голубой эпоксидной смолы. 220×90 см.', category: 'tables' },
-  { id: 2, src: '/images/portfolio/table-2.jpg', title: 'Live Edge Coffee Table', description: 'Журнальный стол с живым краем из вяза. 120×60 см.', category: 'tables' },
-  { id: 3, src: '/images/portfolio/table-3.jpg', title: 'Ocean Table', description: 'Стол с океанической заливкой, имитирующей волны. 200×100 см.', category: 'tables' },
-  { id: 4, src: '/images/portfolio/shelf-1.jpg', title: 'Modular Shelving Unit', description: 'Модульный стеллаж из дуба. 180×200 см.', category: 'shelves' },
-  { id: 5, src: '/images/portfolio/shelf-2.jpg', title: 'Floating Shelf Set', description: 'Навесные полки из массива ясеня. Комплект из 5 штук.', category: 'shelves' },
-  { id: 6, src: '/images/portfolio/wardrobe-1.jpg', title: 'Walk-in Wardrobe', description: 'Гардеробная по индивидуальным размерам с открытыми полками.', category: 'wardrobes' },
-  { id: 7, src: '/images/portfolio/wardrobe-2.jpg', title: 'Sliding Door Wardrobe', description: 'Шкаф-купе с зеркальными фасадами. 300×220 см.', category: 'wardrobes' },
-  { id: 8, src: '/images/portfolio/decor-1.jpg', title: 'Epoxy Wall Art', description: 'Декоративная панель из эпоксидной смолы и золотой фольги.', category: 'decor' },
-]
+const imagePaths: Record<number, string> = {
+  1: '/images/portfolio/table-1.jpg',
+  2: '/images/portfolio/table-2.jpg',
+  3: '/images/portfolio/table-3.jpg',
+  4: '/images/portfolio/shelf-1.jpg',
+  5: '/images/portfolio/shelf-2.jpg',
+  6: '/images/portfolio/wardrobe-1.jpg',
+  7: '/images/portfolio/wardrobe-2.jpg',
+  8: '/images/portfolio/decor-1.jpg',
+}
+
+interface PortfolioItemData {
+  id: number
+  title: string
+  description: string
+  category: string
+}
+
+const allItems = computed(() => {
+  const items = tm('portfolio.items') as PortfolioItemData[]
+  return items.map(item => ({
+    ...item,
+    src: imagePaths[item.id] ?? '',
+  }))
+})
 
 const filteredItems = computed(() =>
   activeFilter.value === 'all'
-    ? allItems
-    : allItems.filter(item => item.category === activeFilter.value)
+    ? allItems.value
+    : allItems.value.filter(item => item.category === activeFilter.value)
 )
 
 useHead({

@@ -64,7 +64,17 @@
       "decor": "Decor"
     },
     "close": "Close",
-    "open": "Open project: {title}"
+    "open": "Open project: {title}",
+    "items": [
+      { "id": 1, "title": "Epoxy River Table", "description": "Dining table in solid walnut with blue epoxy resin pour. 220×90 cm.", "category": "tables" },
+      { "id": 2, "title": "Live Edge Coffee Table", "description": "Live edge coffee table in elm. 120×60 cm.", "category": "tables" },
+      { "id": 3, "title": "Ocean Table", "description": "Table with ocean-inspired resin pour mimicking waves. 200×100 cm.", "category": "tables" },
+      { "id": 4, "title": "Modular Shelving Unit", "description": "Modular shelving unit in oak. 180×200 cm.", "category": "shelves" },
+      { "id": 5, "title": "Floating Shelf Set", "description": "Floating shelves in solid ash. Set of 5.", "category": "shelves" },
+      { "id": 6, "title": "Walk-in Wardrobe", "description": "Custom walk-in wardrobe with open shelving to individual dimensions.", "category": "wardrobes" },
+      { "id": 7, "title": "Sliding Door Wardrobe", "description": "Sliding wardrobe with mirrored fronts. 300×220 cm.", "category": "wardrobes" },
+      { "id": 8, "title": "Epoxy Wall Art", "description": "Decorative panel in epoxy resin with gold leaf.", "category": "decor" }
+    ]
   },
   "contact": {
     "label": "Contact",

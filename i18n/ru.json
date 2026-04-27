@@ -64,7 +64,57 @@
       "decor": "Декор"
     },
     "close": "Закрыть",
-    "open": "Открыть проект: {title}"
+    "open": "Открыть проект: {title}",
+    "items": [
+      {
+        "id": 1,
+        "title": "Epoxy River Table",
+        "description": "Обеденный стол из массива ореха с заливкой из голубой эпоксидной смолы. 220×90 см.",
+        "category": "tables"
+      },
+      {
+        "id": 2,
+        "title": "Live Edge Coffee Table",
+        "description": "Журнальный стол с живым краем из вяза. 120×60 см.",
+        "category": "tables"
+      },
+      {
+        "id": 3,
+        "title": "Ocean Table",
+        "description": "Стол с океанической заливкой, имитирующей волны. 200×100 см.",
+        "category": "tables"
+      },
+      {
+        "id": 4,
+        "title": "Modular Shelving Unit",
+        "description": "Модульный стеллаж из дуба. 180×200 см.",
+        "category": "shelves"
+      },
+      {
+        "id": 5,
+        "title": "Floating Shelf Set",
+        "description": "Навесные полки из массива ясеня. Комплект из 5 штук.",
+        "category": "shelves"
+      },
+      {
+        "id": 6,
+        "title": "Walk-in Wardrobe",
+        "description": "Гардеробная по индивидуальным размерам с открытыми полками.",
+        "category": "wardrobes"
+      },
+      {
+        "id": 7,
+        "title": "Sliding Door Wardrobe",
+        "description": "Шкаф-купе с зеркальными фасадами. 300×220 см.",
+        "category": "wardrobes"
+      },
+      {
+        "id": 8,
+        "title": "Epoxy Wall Art",
+        "description": "Декоративная панель из эпоксидной смолы и золотой фольги.",
+        "category": "decor"
+      }
+    ]
   },
   "contact": {
     "label": "Контакты",
