@@ -138,6 +138,34 @@ body {
   transform: translateX(0);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .btn-gold::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.13),
+      transparent
+    );
+    transform: skewX(-15deg);
+    pointer-events: none;
+  }
+
+  .btn-gold:not(:disabled):hover::after {
+    animation: shimmerSweep 550ms ease-out forwards;
+  }
+
+  @keyframes shimmerSweep {
+    from { left: -75%; }
+    to   { left: 125%; }
+  }
+}
+
 /* Section padding utility */
 .section-padding {
   padding-top: 3rem;
