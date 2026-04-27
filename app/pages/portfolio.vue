@@ -1,7 +1,7 @@
 <!-- app/pages/portfolio.vue -->
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { useI18n } from '#i18n'
+import { useI18n, useLocaleHead } from '#i18n'
 
 const { t, tm } = useI18n()
 
@@ -41,9 +41,19 @@ const filteredItems = computed(() =>
     : allItems.value.filter(item => item.category === activeFilter.value)
 )
 
-useHead({
-  title: computed(() => `${t('portfolio.title')} — EPO Atelier`),
-})
+const localeHead = useLocaleHead({ addSeoAttributes: true })
+
+useHead(() => ({
+  htmlAttrs: localeHead.value.htmlAttrs,
+  title: `${t('portfolio.title')} — EPO Atelier`,
+  meta: [
+    ...(localeHead.value.meta ?? []),
+    { name: 'description', content: t('about.text').slice(0, 155) },
+    { property: 'og:title', content: `${t('portfolio.title')} — EPO Atelier` },
+    { property: 'og:url', content: 'https://epo-atelier.uz/portfolio' },
+  ],
+  link: localeHead.value.link ?? [],
+}))
 </script>
 
 <template>
