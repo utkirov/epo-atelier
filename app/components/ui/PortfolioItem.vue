@@ -17,7 +17,7 @@ const emit = defineEmits<{
 
 <template>
   <article
-    class="portfolio-item group relative overflow-hidden cursor-pointer focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+    class="portfolio-item group relative overflow-hidden cursor-pointer focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_0_1px_rgba(201,169,110,0.45),0_12px_32px_rgba(0,0,0,0.5)]"
     tabindex="0"
     :aria-label="t('portfolio.open', { title })"
     role="button"
@@ -28,7 +28,7 @@ const emit = defineEmits<{
     <img
       :src="src"
       :alt="title"
-      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+      class="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-[1.06] group-hover:[object-position:55%_55%]"
       width="600"
       height="800"
       loading="lazy"
