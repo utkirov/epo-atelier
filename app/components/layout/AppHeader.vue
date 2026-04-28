@@ -76,7 +76,7 @@ const navLinks = [
   { key: 'nav.about', anchor: '#about' },
   { key: 'nav.services', anchor: '#services' },
   { key: 'nav.portfolio', anchor: '/portfolio' },
-  { key: 'nav.contact', anchor: '#contact' },
+  { key: 'nav.contact', anchor: '/#contact' },
 ]
 
 const langItems = [
