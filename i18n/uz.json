@@ -35,7 +35,7 @@
       },
       {
         "title": "Saqlash tizimlari",
-        "description": "Gardеroblar, javonlar va maqbul makonga mos o'rnatilgan yechimlar."
+        "description": "Garderoblar, javonlar va maqbul makonga mos o'rnatilgan yechimlar."
       }
     ]
   },
@@ -65,15 +65,82 @@
     },
     "close": "Yopish",
     "open": "Loyihani ochish: {title}",
+    "material": "Material",
+    "dimensions": "O'lchamlar",
+    "order": "Shunga o'xshash buyurtma",
     "items": [
-      { "id": 1, "title": "Epoxy River Table", "description": "Ko'k epoksid smola quyilgan yong'oq massividan ovqat stoli. 220×90 sm.", "category": "tables" },
-      { "id": 2, "title": "Live Edge Coffee Table", "description": "Qayin yog'ochidan tirik qirrali jurnal stoli. 120×60 sm.", "category": "tables" },
-      { "id": 3, "title": "Ocean Table", "description": "To'lqinlarni taqlid qiluvchi okean uslubidagi epoksid stol. 200×100 sm.", "category": "tables" },
-      { "id": 4, "title": "Modular Shelving Unit", "description": "Eman yog'ochidan modulli javon. 180×200 sm.", "category": "shelves" },
-      { "id": 5, "title": "Floating Shelf Set", "description": "Kul massividan osilma javonlar to'plami. 5 ta.", "category": "shelves" },
-      { "id": 6, "title": "Walk-in Wardrobe", "description": "Individual o'lchamlar bo'yicha ochiq javonli garderobxona.", "category": "wardrobes" },
-      { "id": 7, "title": "Sliding Door Wardrobe", "description": "Ko'zgu fasadli siljuvchi eshikli shkaf. 300×220 sm.", "category": "wardrobes" },
-      { "id": 8, "title": "Epoxy Wall Art", "description": "Epoksid smola va oltin folga dekorativ panel.", "category": "decor" }
+      {
+        "id": 1,
+        "title": "Epoxy River Stoli",
+        "description": "Ko'k epoksi smola bilan ikki qatlamli quyilgan yong'oq massividan ovqat stoli. Noyob daryo naqshi yog'ochning tabiiy tuzilishini ochib beradi.",
+        "category": "tables",
+        "material": "Yong'oq, ko'k epoksi smola",
+        "dimensions": "220 × 90 × 75 sm",
+        "year": "2024"
+      },
+      {
+        "id": 2,
+        "title": "Live Edge Jurnal Stoli",
+        "description": "Qayin yog'ochidan tirik qirrali jurnal stoli. Minimalist dizayn slabning tabiiy shaklini ta'kidlaydi.",
+        "category": "tables",
+        "material": "Qayin, qora mat po'lat oyoqlar",
+        "dimensions": "120 × 60 × 45 sm",
+        "year": "2024"
+      },
+      {
+        "id": 3,
+        "title": "Ocean Stoli",
+        "description": "Dengiz to'lqinlari va okean chuqurligini taqlid qiluvchi ko'p qatlamli smola bilan ovqat stoli. Har bir burchakdan yangi tafsilotlar ko'rinadi.",
+        "category": "tables",
+        "material": "Kul, shaffof va ko'k epoksi smola",
+        "dimensions": "200 × 100 × 75 sm",
+        "year": "2023"
+      },
+      {
+        "id": 4,
+        "title": "Modulli Javon",
+        "description": "Ochiq tokchali eman massividan modulli javon. Mehmonxona, kabinet yoki dahlizga mos keladi.",
+        "category": "shelves",
+        "material": "Eman, mat lak",
+        "dimensions": "180 × 30 × 200 sm",
+        "year": "2024"
+      },
+      {
+        "id": 5,
+        "title": "Osilma Tokchalar To'plami",
+        "description": "Yashirin mahkamlash bilan kul massividan osilma tokchalar. Dinamik devor kompozitsiyasi uchun har xil uzunlikdagi 5 ta to'plam.",
+        "category": "shelves",
+        "material": "Kul, yashirin metall kronshteynlar",
+        "dimensions": "60–120 × 25 sm",
+        "year": "2023"
+      },
+      {
+        "id": 6,
+        "title": "Garderobxona",
+        "description": "Ochiq tokchalar, shtangalar va tortmalar bilan individual o'lchamlarda garderobxona. Iliq yoritish va yog'och qulay muhit yaratadi.",
+        "category": "wardrobes",
+        "material": "Yong'oq shponi bilan MDF, LED yoritish",
+        "dimensions": "360 × 220 × 60 sm",
+        "year": "2024"
+      },
+      {
+        "id": 7,
+        "title": "Siljuvchi Eshikli Shkaf",
+        "description": "Mat alyuminiy ramkadagi ko'zgu fasadli siljuvchi shkaf. Ichki tartib mijoz talabiga ko'ra bajariladi.",
+        "category": "wardrobes",
+        "material": "MDF, ko'zgu, alyuminiy profil",
+        "dimensions": "300 × 60 × 220 sm",
+        "year": "2023"
+      },
+      {
+        "id": 8,
+        "title": "Epoksi Devor San'ati",
+        "description": "Oltin folga va pigmentlar bilan epoksi smoladan dekorativ panel. Yagona nusxada bajarilgan muallif asari.",
+        "category": "decor",
+        "material": "Epoksi smola, oltin folga, pigmentlar",
+        "dimensions": "80 × 120 sm",
+        "year": "2024"
+      }
     ]
   },
   "contact": {

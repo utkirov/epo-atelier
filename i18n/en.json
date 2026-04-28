@@ -65,15 +65,82 @@
     },
     "close": "Close",
     "open": "Open project: {title}",
+    "material": "Material",
+    "dimensions": "Dimensions",
+    "order": "Order Similar",
     "items": [
-      { "id": 1, "title": "Epoxy River Table", "description": "Dining table in solid walnut with blue epoxy resin pour. 220×90 cm.", "category": "tables" },
-      { "id": 2, "title": "Live Edge Coffee Table", "description": "Live edge coffee table in elm. 120×60 cm.", "category": "tables" },
-      { "id": 3, "title": "Ocean Table", "description": "Table with ocean-inspired resin pour mimicking waves. 200×100 cm.", "category": "tables" },
-      { "id": 4, "title": "Modular Shelving Unit", "description": "Modular shelving unit in oak. 180×200 cm.", "category": "shelves" },
-      { "id": 5, "title": "Floating Shelf Set", "description": "Floating shelves in solid ash. Set of 5.", "category": "shelves" },
-      { "id": 6, "title": "Walk-in Wardrobe", "description": "Custom walk-in wardrobe with open shelving to individual dimensions.", "category": "wardrobes" },
-      { "id": 7, "title": "Sliding Door Wardrobe", "description": "Sliding wardrobe with mirrored fronts. 300×220 cm.", "category": "wardrobes" },
-      { "id": 8, "title": "Epoxy Wall Art", "description": "Decorative panel in epoxy resin with gold leaf.", "category": "decor" }
+      {
+        "id": 1,
+        "title": "Epoxy River Table",
+        "description": "Dining table in solid walnut with a double pour of blue epoxy resin. The unique river pattern reveals the natural grain of the wood.",
+        "category": "tables",
+        "material": "Walnut, blue epoxy resin",
+        "dimensions": "220 × 90 × 75 cm",
+        "year": "2024"
+      },
+      {
+        "id": 2,
+        "title": "Live Edge Coffee Table",
+        "description": "Live edge coffee table in elm. Minimalist design highlights the natural form of the slab.",
+        "category": "tables",
+        "material": "Elm, matte black steel legs",
+        "dimensions": "120 × 60 × 45 cm",
+        "year": "2024"
+      },
+      {
+        "id": 3,
+        "title": "Ocean Table",
+        "description": "Dining table with a layered resin pour mimicking sea waves and ocean depth. Every angle reveals new detail.",
+        "category": "tables",
+        "material": "Ash, clear and blue epoxy resin",
+        "dimensions": "200 × 100 × 75 cm",
+        "year": "2023"
+      },
+      {
+        "id": 4,
+        "title": "Modular Shelving Unit",
+        "description": "Modular shelving unit in solid oak with open shelves. Suits living rooms, studies, and hallways equally.",
+        "category": "shelves",
+        "material": "Oak, matte lacquer",
+        "dimensions": "180 × 30 × 200 cm",
+        "year": "2024"
+      },
+      {
+        "id": 5,
+        "title": "Floating Shelf Set",
+        "description": "Floating shelves in solid ash with concealed mounting. Set of 5 in varying lengths for a dynamic wall composition.",
+        "category": "shelves",
+        "material": "Ash, hidden metal brackets",
+        "dimensions": "60–120 × 25 cm",
+        "year": "2023"
+      },
+      {
+        "id": 6,
+        "title": "Walk-in Wardrobe",
+        "description": "Custom walk-in wardrobe with open shelving, rails, and drawers. Warm lighting and natural wood create an inviting atmosphere.",
+        "category": "wardrobes",
+        "material": "MDF with walnut veneer, LED lighting",
+        "dimensions": "360 × 220 × 60 cm",
+        "year": "2024"
+      },
+      {
+        "id": 7,
+        "title": "Sliding Door Wardrobe",
+        "description": "Sliding wardrobe with mirrored fronts in a matte aluminium frame. Interior organisation tailored to client requirements.",
+        "category": "wardrobes",
+        "material": "MDF, mirror, aluminium profile",
+        "dimensions": "300 × 60 × 220 cm",
+        "year": "2023"
+      },
+      {
+        "id": 8,
+        "title": "Epoxy Wall Art",
+        "description": "Decorative panel in epoxy resin with inclusions of gold leaf and pigments. A one-of-a-kind original artwork.",
+        "category": "decor",
+        "material": "Epoxy resin, gold leaf, pigments",
+        "dimensions": "80 × 120 cm",
+        "year": "2024"
+      }
     ]
   },
   "contact": {

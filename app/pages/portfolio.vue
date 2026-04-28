@@ -3,7 +3,7 @@
 import { ref, computed } from 'vue'
 import { useI18n, useLocaleHead } from '#i18n'
 
-const { t, tm } = useI18n()
+const { t } = useI18n()
 
 const activeFilter = ref('all')
 
@@ -25,14 +25,28 @@ interface PortfolioItemData {
   title: string
   description: string
   category: string
+  material?: string
+  dimensions?: string
+  year?: string
 }
 
-const allItems = computed(() => {
-  const items = tm('portfolio.items') as PortfolioItemData[]
-  return items.map(item => ({
-    ...item,
-    src: imagePaths[item.id] ?? '',
-  }))
+const ITEM_COUNT = 8
+
+const allItems = computed((): (PortfolioItemData & { src: string })[] => {
+  return Array.from({ length: ITEM_COUNT }, (_, i) => {
+    const idx = i
+    const id = i + 1
+    return {
+      id,
+      title: t(`portfolio.items[${idx}].title`),
+      description: t(`portfolio.items[${idx}].description`),
+      category: t(`portfolio.items[${idx}].category`),
+      material: t(`portfolio.items[${idx}].material`) || undefined,
+      dimensions: t(`portfolio.items[${idx}].dimensions`) || undefined,
+      year: t(`portfolio.items[${idx}].year`) || undefined,
+      src: imagePaths[id] ?? '',
+    }
+  })
 })
 
 const filteredItems = computed(() =>
@@ -91,9 +105,39 @@ useHead(() => ({
         </div>
 
         <!-- Grid -->
-        <PortfolioGrid :items="filteredItems" />
+        <Transition name="filter-fade" mode="out-in">
+          <div :key="activeFilter">
+            <PortfolioGrid :items="filteredItems" />
+          </div>
+        </Transition>
       </div>
     </main>
     <AppFooter />
   </div>
 </template>
+
+<style scoped>
+.filter-fade-enter-active {
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+.filter-fade-leave-active {
+  transition: opacity 160ms ease;
+}
+.filter-fade-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.filter-fade-leave-to {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .filter-fade-enter-active,
+  .filter-fade-leave-active {
+    transition: opacity 100ms ease;
+  }
+  .filter-fade-enter-from {
+    transform: none;
+  }
+}
+</style>
